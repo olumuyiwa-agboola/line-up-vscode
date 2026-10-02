@@ -2,7 +2,7 @@
 
 Rearranges selected lines in ascending order of length, from the shortest at the top to the longest at the bottom.
 
-Perfect for `using` statements, imports, variable declarations, or anywhere else the order of lines doesn't matter.
+Perfect for `using` directives, imports, variable declarations, or anywhere else the order of lines doesn't matter.
 
 ```csharp
 using System.Threading.Tasks;                 using System;
@@ -14,7 +14,7 @@ using System.Linq;                            using System.Collections.Generic;
 ## Usage
 
 1. Select the lines you want to line up. A partially selected line counts as a whole line.
-2. Press <kbd>Ctrl</kbd>+<kbd>R</kbd>, <kbd>Ctrl</kbd>+<kbd>R</kbd>, or run **Line Up: Line Up Selected Lines** from the Command Palette.
+2. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>, or run **Line Up: Line Up Selected Lines** from the Command Palette.
 
 Notes:
 
@@ -22,13 +22,15 @@ Notes:
 - Lines of equal length keep their original order.
 - Works with multiple selections; each selection is lined up separately.
 
-## Lining up C# using directives on save
+## Bonus for .NET Development
+
+### Lining up C# using directives on save
 
 When you save a C# file that has unsaved changes, Line Up automatically lines up its `using` directives, no selection needed. Each group of consecutive usings is lined up on its own, so blank lines between groups are kept.
 
 This only happens on an explicit save (not auto-save). To turn it off, set `lineUp.usingsOnSave` to `false`.
 
-## Lining up a whole project or solution
+### Lining up a whole project or solution
 
 Run either command from the Command Palette:
 
@@ -41,4 +43,5 @@ A project's C# files are all the `.cs` files under its folder, except those in `
 
 ## Changing the shortcut
 
-Open **Keyboard Shortcuts**, search for `line-up.lineUp`, and assign the key binding you like.
+Open **Keyboard Shortcuts**, search for `line-up.lineUpSelectedLines`, and assign the key binding you like for lining up selected lines.
+For lining up `using` directives in the `C#` files in a `.NET` project or solution, no keyboard shortcuts have been assigned. You can open **Keyboard Shortcuts**, and search for `line-up.lineUpUsingsInProject` or `line-up.lineUpUsingsInSolution` and assign the key bindings you like.

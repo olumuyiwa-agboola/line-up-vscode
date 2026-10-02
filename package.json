@@ -2,7 +2,7 @@
   "name": "line-up",
   "displayName": "Line Up",
   "description": "Rearranges selected lines in ascending order of length, from shortest to longest.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "publisher": "olumuyiwa-agboola",
   "repository": {
@@ -49,7 +49,7 @@
     "keybindings": [
       {
         "command": "line-up.lineUpSelectedLines",
-        "key": "ctrl+r shift+r",
+        "key": "ctrl+shift+r",
         "mac": "cmd+shift+r",
         "win": "ctrl+shift+r",
         "linux": "ctrl+shift+r",
