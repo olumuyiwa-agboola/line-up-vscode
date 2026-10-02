@@ -49,7 +49,10 @@
     "keybindings": [
       {
         "command": "line-up.lineUpSelectedLines",
-        "key": "ctrl+r ctrl+r",
+        "key": "ctrl+r shift+r",
+        "mac": "cmd+shift+r",
+        "win": "ctrl+shift+r",
+        "linux": "ctrl+shift+r",
         "when": "editorTextFocus && !editorReadonly"
       }
     ],
