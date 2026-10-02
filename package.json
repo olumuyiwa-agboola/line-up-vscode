@@ -1,0 +1,89 @@
+{
+  "name": "line-up",
+  "displayName": "Line Up",
+  "description": "Rearranges selected lines in ascending order of length, from shortest to longest.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publisher": "olumuyiwa-agboola",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olumuyiwa-agboola/line-up-vscode"
+  },
+  "engines": {
+    "vscode": "^1.135.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "sort",
+    "lines",
+    "length",
+    "using",
+    "imports",
+    "tidy"
+  ],
+  "activationEvents": [
+    "onLanguage:csharp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "line-up.lineUpSelectedLines",
+        "title": "Line Up Selected Lines",
+        "category": "Line Up"
+      },
+      {
+        "command": "line-up.lineUpUsingsInProject",
+        "title": "Line Up Using Directives in C# Files in Current Project",
+        "category": "Line Up"
+      },
+      {
+        "command": "line-up.lineUpUsingsInSolution",
+        "title": "Line Up Using Directives in C# Files in Solution",
+        "category": "Line Up"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "line-up.lineUpSelectedLines",
+        "key": "ctrl+r ctrl+r",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    ],
+    "configuration": {
+      "title": "Line Up",
+      "properties": {
+        "lineUp.usingsOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Line up the using directives of C# files when saving them."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "~1.134.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
