@@ -2,7 +2,7 @@
   "name": "line-up",
   "displayName": "Line Up",
   "description": "Rearranges selected lines in ascending order of length, from shortest to longest.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "publisher": "olumuyiwa-agboola",
   "repository": {
