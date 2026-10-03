@@ -2,6 +2,9 @@
 
 All notable changes to the "line-up" extension will be documented in this file.
 
+## [1.0.3]
+- Add icon.
+
 ## [1.0.2]
 - Update keyboard shortcut for lining up selected lines as follows:
     - Default: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
